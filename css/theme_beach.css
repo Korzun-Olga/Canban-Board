@@ -1,0 +1,11 @@
+.app {
+  background: url('../img/vacations.jpg') center/cover no-repeat;
+}
+
+.fa-solid[data-theme='forest'] {
+  display: block;
+}
+
+.fa-solid[data-theme='beach'] {
+  display: none;
+}

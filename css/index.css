@@ -1,4 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;1,600&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
+html {
+  font-family: "Raleway", "Cardo", sans-serif;
+  font-size: 16px;
+}
+@media (max-width: 992px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media (max-width: 576px) {
+  html {
+    font-size: 10px;
+  }
+}
+@media (max-width: 320px) {
+  html {
+    font-size: 9px;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -21,13 +47,36 @@
   padding: 50px 0;
   background: url("../img/vacations.jpg") center/cover no-repeat;
 }
-.app .boards {
+.app .container {
+  max-width: 1170px;
+}
+@media (max-width: 992px) {
+  .app .container {
+    width: 760px;
+  }
+}
+@media (max-width: 767px) {
+  .app .container {
+    width: 570px;
+  }
+}
+@media (max-width: 576px) {
+  .app .container {
+    width: 96%;
+  }
+}
+@media (max-width: 320px) {
+  .app .container {
+    width: 96%;
+  }
+}
+.app .container .boards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
-.app .boards .boards_item {
+.app .container .boards .boards_item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,17 +95,17 @@
   transition: 0.3s all ease;
   border-radius: 3px;
 }
-.app .boards .boards_item .title {
+.app .container .boards .boards_item .title {
   padding: 5px;
   color: #eeeeee;
 }
-.app .boards .boards_item .title:focus {
+.app .container .boards .boards_item .title:focus {
   outline: 1px solid rgba(168, 168, 168, 0.45);
 }
-.app .boards .boards_item .list {
+.app .container .boards .boards_item .list {
   min-height: 40px;
 }
-.app .boards .boards_item .list .list_item {
+.app .container .boards .boards_item .list .list_item {
   background-color: #fefefe;
   border-radius: 3px;
   padding: 10px;
@@ -68,12 +117,12 @@
   outline: none;
   border: none;
 }
-.app .boards .boards_item .form {
+.app .container .boards .boards_item .form {
   border-radius: 3px;
   margin-top: auto;
   display: none;
 }
-.app .boards .boards_item .form .textarea {
+.app .container .boards .boards_item .form .textarea {
   resize: none;
   padding: 10px 15px;
   border-radius: 3px;
@@ -81,15 +130,15 @@
   background: #fefefe;
   width: 100%;
 }
-.app .boards .boards_item .form .textarea:focus {
+.app .container .boards .boards_item .form .textarea:focus {
   outline: none;
 }
-.app .boards .boards_item .form .buttons {
+.app .container .boards .boards_item .form .buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.app .boards .boards_item .form .buttons .add_item-btn {
+.app .container .boards .boards_item .form .buttons .add_item-btn {
   background: #0d88da;
   border: none;
   padding: 5px 15px;
@@ -109,7 +158,7 @@
   font-size: 0.75rem;
   color: #eeeeee;
 }
-.app .boards .boards_item .form .buttons .cancel_item-btn {
+.app .container .boards .boards_item .form .buttons .cancel_item-btn {
   padding: 5px 15px;
   background: #a0110c;
   border: none;
@@ -129,7 +178,7 @@
   color: #eeeeee;
   cursor: pointer;
 }
-.app .boards .boards_item .add_btn {
+.app .container .boards .boards_item .add_btn {
   padding: 5px 15px;
   background: rgba(155, 155, 155, 0.3);
   border-radius: 3px;
@@ -144,12 +193,23 @@
   color: #eeeeee;
   cursor: pointer;
 }
-.app .boards .boards_item .add_btn span {
+.app .container .boards .boards_item .add_btn span {
   font-size: 0.9375rem;
   margin-right: 10px;
   color: #eeeeee;
 }
-.app .button {
+.app .container .button_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.app .container .button_row .button {
   padding: 10px 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -166,10 +226,40 @@
   cursor: pointer;
   position: absolute;
   bottom: 50px;
-  left: 50%;
-  -webkit-transition: translate -50%;
-  transition: translate -50%;
+  margin: auto;
   color: #eeeeee;
   border-radius: 3px;
   font-size: 0.875rem;
+}
+
+.switcher {
+  margin-left: 15px;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(254, 254, 254, 0.7);
+  -webkit-box-shadow: 0 0 10px rgba(3, 47, 73, 0.62);
+          box-shadow: 0 0 10px rgba(3, 47, 73, 0.62);
+  border-radius: 50%;
+  position: fixed;
+  bottom: 0%;
+  margin-bottom: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.switcher .forest {
+  color: #025521;
+  font-size: 1.875rem;
+  cursor: pointer;
+}
+.switcher .beach {
+  color: #0d88da;
+  font-size: 1.875rem;
+  cursor: pointer;
 }

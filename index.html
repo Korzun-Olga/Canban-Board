@@ -6,32 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" title="theme" href="#" />
   </head>
   <body>
     <h1></h1>
-    <div class="app">
-      <div class="boards">
-        <div class="boards_item">
-          <span class="title" contenteditable="true">Введите название</span>
-          <div class="list">
-            <div class="list_item" draggable="true">Стартовая карточка</div>
-            <div class="form">
-              <textarea
-                class="textarea"
-                placeholder="Введите название карточки"
-              ></textarea>
-              <div class="buttons">
-                <dutton class="add_item-btn">Добавить карточку</dutton>
-                <dutton class="cancel_item-btn">Отмена</dutton>
-              </div>
-            </div>
-            <div class="add_btn"><span> + </span> Добавить карточку</div>
-          </div>
-        </div>
+    <div class="switcher">
+      <div class="forest">
+        <i class="fa-solid fa-tree" data-theme="forest"></i>
       </div>
-      <div class="button">Добавить доску</div>
+      <div class="beach">
+        <i class="fa-solid fa-umbrella-beach" data-theme="beach"></i>
+      </div>
     </div>
 
-    <script src="./js/index.js"></script>
+    <div class="app">
+      <div class="container">
+        <div class="boards">
+          <div class="boards_item">
+            <span class="title" contenteditable="true">Введите название</span>
+            <div class="list">
+              <div class="list_item" draggable="true">Стартовая карточка</div>
+              <div class="form">
+                <textarea
+                  class="textarea"
+                  placeholder="Введите название карточки"
+                ></textarea>
+                <div class="buttons">
+                  <dutton class="add_item-btn">Добавить карточку</dutton>
+                  <dutton class="cancel_item-btn">Отмена</dutton>
+                </div>
+              </div>
+              <div class="add_btn"><span> + </span> Добавить карточку</div>
+            </div>
+          </div>
+        </div>
+        <div class="button_row">
+          <div class="button">Добавить доску</div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./js/index.js"></script>
   </body>
 </html>
