@@ -23,20 +23,23 @@ btn.addEventListener('click', () => {
     } else {
       addBtn.style.display = 'none';
     }
+    localStorage.setItem('inputValue', value.toString());
   });
 });
-
-cancelBtn.addEventListener('click', clearForm);
 
 addBtn.addEventListener('click', () => {
   const newItem = document.createElement('div');
   newItem.classList.add('list_item');
   newItem.draggable = true;
   newItem.textContent = value;
+  //тут есть value тогда почему массив пустой
   lists[0].append(newItem);
+  localStorage.setItem('list', JSON.stringify(newItem));
   clearForm();
   dragNdrop();
 });
+
+cancelBtn.addEventListener('click', clearForm);
 
 function clearForm() {
   textarea.value = '';
@@ -48,7 +51,6 @@ function clearForm() {
 button.addEventListener('click', addBoard);
 
 let activeTheme = localStorage.getItem('theme');
-
 if (activeTheme === null) {
   applyTheme('beach');
 } else {

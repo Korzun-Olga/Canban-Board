@@ -1,4 +1,3 @@
-//cоздаем DragNDropб для этого нам нужны все списки и все элементы списков
 let draggetItem = null;
 
 function dragNdrop() {

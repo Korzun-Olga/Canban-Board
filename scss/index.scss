@@ -53,6 +53,8 @@ html {
     .boards {
       display: flex;
       width: 100%;
+      flex-wrap: wrap;
+
       .boards_item {
         display: flex;
         flex-direction: column;
@@ -61,6 +63,7 @@ html {
         width: 100%;
         background-color: $black_transp;
         margin: 0 15px;
+        margin-bottom: 15px;
         padding: 10px;
         transition: 0.3s all ease;
         border-radius: 3px;
@@ -157,19 +160,19 @@ html {
       align-items: center;
 
       .button {
-        padding: 10px 15px;
+        padding: 0.625em 0.9375em;
         display: flex;
         justify-content: center;
         align-items: center;
         background: $button_add_board;
         border: none;
-        width: 200px;
+        width: 14em;
         cursor: pointer;
         position: absolute;
         bottom: 50px;
         margin: auto;
         color: $text_color;
-        border-radius: 3px;
+        border-radius: 0.1875em;
         font-size: $_14px;
       }
     }
@@ -177,10 +180,10 @@ html {
 }
 .switcher {
   margin-left: 15px;
-  width: 60px;
-  height: 60px;
+  width: 3.75em;
+  height: 3.75em;
   background-color: $bg_card_transp;
-  box-shadow: 0 0 10px $button_add_board;
+  box-shadow: 0 0 0.625em $button_add_board;
   border-radius: 50%;
   position: fixed;
   bottom: 0%;
@@ -196,6 +199,28 @@ html {
   }
   .beach {
     color: $button;
+    font-size: $_30px;
+    cursor: pointer;
+  }
+}
+.trash {
+  margin-left: 15px;
+  width: 3.75em;
+  height: 3.75em;
+  background-color: $bg_card_transp;
+  box-shadow: 0 0 0.625em $button_add_board;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 0%;
+  right: 0%;
+  margin-right: 15px;
+  margin-bottom: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .fa-trash-can {
+    color: $button_cancel;
     font-size: $_30px;
     cursor: pointer;
   }

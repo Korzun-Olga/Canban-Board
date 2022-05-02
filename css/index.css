@@ -75,6 +75,8 @@ html {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .app .container .boards .boards_item {
   display: -webkit-box;
@@ -90,6 +92,7 @@ html {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   margin: 0 15px;
+  margin-bottom: 15px;
   padding: 10px;
   -webkit-transition: 0.3s all ease;
   transition: 0.3s all ease;
@@ -210,7 +213,7 @@ html {
           align-items: center;
 }
 .app .container .button_row .button {
-  padding: 10px 15px;
+  padding: 0.625em 0.9375em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -222,23 +225,23 @@ html {
           align-items: center;
   background: rgba(3, 47, 73, 0.62);
   border: none;
-  width: 200px;
+  width: 14em;
   cursor: pointer;
   position: absolute;
   bottom: 50px;
   margin: auto;
   color: #eeeeee;
-  border-radius: 3px;
+  border-radius: 0.1875em;
   font-size: 0.875rem;
 }
 
 .switcher {
   margin-left: 15px;
-  width: 60px;
-  height: 60px;
+  width: 3.75em;
+  height: 3.75em;
   background-color: rgba(254, 254, 254, 0.7);
-  -webkit-box-shadow: 0 0 10px rgba(3, 47, 73, 0.62);
-          box-shadow: 0 0 10px rgba(3, 47, 73, 0.62);
+  -webkit-box-shadow: 0 0 0.625em rgba(3, 47, 73, 0.62);
+          box-shadow: 0 0 0.625em rgba(3, 47, 73, 0.62);
   border-radius: 50%;
   position: fixed;
   bottom: 0%;
@@ -260,6 +263,35 @@ html {
 }
 .switcher .beach {
   color: #0d88da;
+  font-size: 1.875rem;
+  cursor: pointer;
+}
+
+.trash {
+  margin-left: 15px;
+  width: 3.75em;
+  height: 3.75em;
+  background-color: rgba(254, 254, 254, 0.7);
+  -webkit-box-shadow: 0 0 0.625em rgba(3, 47, 73, 0.62);
+          box-shadow: 0 0 0.625em rgba(3, 47, 73, 0.62);
+  border-radius: 50%;
+  position: fixed;
+  bottom: 0%;
+  right: 0%;
+  margin-right: 15px;
+  margin-bottom: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.trash .fa-trash-can {
+  color: #a0110c;
   font-size: 1.875rem;
   cursor: pointer;
 }

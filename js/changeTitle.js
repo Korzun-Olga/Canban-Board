@@ -1,14 +1,21 @@
-//пишем функцию которая убирает кастомное название "Введите название"
 function changeTitle() {
   const titles = document.querySelectorAll('.title');
-
   titles.forEach((title) => {
     title.addEventListener('click', (e) => (e.target.textContent = ''));
   });
 }
 changeTitle();
 
-/*у нас будет много досок, и это уже массив, поэтому прописываем цикл который будет их всех обрабатывать
-  из-за того что у нас title" contenteditable="true" вот тут стоит уже true мы можем кликать на поле и вводить свои данные, но не стирается строчка кастомная
-  тут мы берем title и при клике мы убираем кастомный текст. чтобы функция работала ее надо вызвать в двух местах, addboard (чтобы это работало во вновь создаваемых карточках) и сразу после функции (потому, что при открытии странички у нас уже есть карточка)*/
+let newTitle;
+function saveTitle() {
+  const titles = document.querySelectorAll('.title');
+  titles.forEach((title) => {
+    title.addEventListener('input', (event) => {
+      newTitle = event.target.value;
+      localStorage.setItem('newTitle', JSON.stringify(title));
+    });
+  });
+}
+saveTitle();
+
 export { changeTitle };
